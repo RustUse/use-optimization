@@ -19,7 +19,7 @@ The RustUse approach in this workspace stays intentionally narrow:
 
 - `use-optimization`: thin facade crate that reexports the full optimization workspace
 - `use-objective`: objective direction and objective value helpers
-- `use-constraint`: bounds and simple constraint checks
+- `use-optimization-constraint`: bounds and simple constraint checks
 - `use-search-space`: one-dimensional range and linspace helpers
 - `use-score`: simple scoring, ranking, and normalization helpers
 - `use-loss`: common error and loss helpers for `f64` slices

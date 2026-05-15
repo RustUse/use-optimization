@@ -2,7 +2,7 @@
 members = [
     "crates/use-optimization",
     "crates/use-objective",
-    "crates/use-constraint",
+    "crates/use-optimization-constraint",
     "crates/use-search-space",
     "crates/use-score",
     "crates/use-loss",
@@ -16,13 +16,14 @@ authors = ["RustUse Contributors"]
 edition = "2024"
 homepage = "https://rustuse.org"
 license = "MIT OR Apache-2.0"
+publish = false
 readme = "README.md"
 repository = "https://github.com/RustUse/use-optimization"
 rust-version = "1.95.0"
 version = "0.0.1"
 
 [workspace.dependencies]
-use-constraint = { version = "0.0.1", path = "crates/use-constraint" }
+use-optimization-constraint = { version = "0.0.1", path = "crates/use-optimization-constraint" }
 use-grid-search = { version = "0.0.1", path = "crates/use-grid-search" }
 use-local-search = { version = "0.0.1", path = "crates/use-local-search" }
 use-loss = { version = "0.0.1", path = "crates/use-loss" }
@@ -36,7 +37,7 @@ publish = false
 versioning = "lockstep-0.x"
 first-publish-candidates = [
     "use-objective",
-    "use-constraint",
+    "use-optimization-constraint",
     "use-search-space",
     "use-score",
     "use-loss",

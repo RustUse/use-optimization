@@ -9,6 +9,7 @@ homepage.workspace = true
 license.workspace = true
 repository.workspace = true
 rust-version.workspace = true
+readme = "README.md"
 documentation = "https://docs.rs/use-local-search"
 keywords = ["local", "search", "optimization", "hill-climbing", "objective"]
 categories = ["algorithms", "mathematics", "science"]

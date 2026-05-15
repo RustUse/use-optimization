@@ -3,10 +3,6 @@
 version = 4
 
 [[package]]
-name = "use-constraint"
-version = "0.0.1"
-
-[[package]]
 name = "use-grid-search"
 version = "0.0.1"
 dependencies = [
@@ -32,14 +28,18 @@ version = "0.0.1"
 name = "use-optimization"
 version = "0.0.1"
 dependencies = [
- "use-constraint",
  "use-grid-search",
  "use-local-search",
  "use-loss",
  "use-objective",
+ "use-optimization-constraint",
  "use-score",
  "use-search-space",
 ]
+
+[[package]]
+name = "use-optimization-constraint"
+version = "0.0.1"
 
 [[package]]
 name = "use-score"

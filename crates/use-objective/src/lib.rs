@@ -89,7 +89,7 @@ pub fn best_value(values: &[f64], direction: ObjectiveDirection) -> Option<f64> 
 
 #[cfg(test)]
 mod tests {
-    use super::{best_value, is_better, ObjectiveDirection, ObjectiveValue};
+    use super::{ObjectiveDirection, ObjectiveValue, best_value, is_better};
 
     #[test]
     fn compares_candidates_by_direction() {

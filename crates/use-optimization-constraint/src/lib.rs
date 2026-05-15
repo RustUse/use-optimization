@@ -7,7 +7,7 @@
 //! # Examples
 //!
 //! ```rust
-//! use use_constraint::{satisfies_all, Bounds};
+//! use use_optimization_constraint::{satisfies_all, Bounds};
 //!
 //! let constraints = [
 //!     Bounds { min: Some(0.0), max: Some(10.0) },

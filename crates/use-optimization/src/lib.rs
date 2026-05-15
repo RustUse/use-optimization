@@ -18,8 +18,6 @@
 //! assert!(Bounds { min: Some(0.0), max: Some(10.0) }.contains(4.0));
 //! ```
 
-pub use use_constraint;
-pub use use_constraint::*;
 pub use use_grid_search;
 pub use use_grid_search::*;
 pub use use_local_search;
@@ -28,6 +26,8 @@ pub use use_loss;
 pub use use_loss::*;
 pub use use_objective;
 pub use use_objective::*;
+pub use use_optimization_constraint;
+pub use use_optimization_constraint::*;
 pub use use_score;
 pub use use_score::*;
 pub use use_search_space;

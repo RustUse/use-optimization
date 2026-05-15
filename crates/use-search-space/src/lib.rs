@@ -110,7 +110,7 @@ pub fn linspace(start: f64, end: f64, points: usize) -> Result<Vec<f64>, SearchS
 
 #[cfg(test)]
 mod tests {
-    use super::{linspace, RangeSpace, SearchSpaceError};
+    use super::{RangeSpace, SearchSpaceError, linspace};
 
     fn approx_eq(left: &[f64], right: &[f64]) {
         assert_eq!(left.len(), right.len());

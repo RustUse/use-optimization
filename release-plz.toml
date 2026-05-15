@@ -1,0 +1,75 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-objective"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-optimization-constraint"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-search-space"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-score"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-loss"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-grid-search"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-local-search"
+release = true
+version_group = "rustuse-optimization"
+
+[[package]]
+name = "use-optimization"
+release = true
+version_group = "rustuse-optimization"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-objective",
+  "use-optimization-constraint",
+  "use-search-space",
+  "use-score",
+  "use-loss",
+  "use-grid-search",
+  "use-local-search",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]

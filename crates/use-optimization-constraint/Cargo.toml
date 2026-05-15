@@ -1,5 +1,5 @@
 [package]
-name = "use-constraint"
+name = "use-optimization-constraint"
 description = "Bounds and simple constraint helpers for primitive optimization"
 publish = true
 authors.workspace = true
@@ -9,7 +9,8 @@ homepage.workspace = true
 license.workspace = true
 repository.workspace = true
 rust-version.workspace = true
-documentation = "https://docs.rs/use-constraint"
+readme = "README.md"
+documentation = "https://docs.rs/use-optimization-constraint"
 keywords = ["constraint", "bounds", "optimization", "range", "clamp"]
 categories = ["algorithms", "mathematics", "science"]
 

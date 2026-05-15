@@ -9,12 +9,13 @@ homepage.workspace = true
 license.workspace = true
 repository.workspace = true
 rust-version.workspace = true
+readme = "README.md"
 documentation = "https://docs.rs/use-optimization"
 keywords = ["optimization", "objective", "search", "score", "loss"]
 categories = ["algorithms", "mathematics", "science"]
 
 [dependencies]
-use-constraint.workspace = true
+use-optimization-constraint.workspace = true
 use-grid-search.workspace = true
 use-local-search.workspace = true
 use-loss.workspace = true

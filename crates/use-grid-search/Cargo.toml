@@ -9,6 +9,7 @@ homepage.workspace = true
 license.workspace = true
 repository.workspace = true
 rust-version.workspace = true
+readme = "README.md"
 documentation = "https://docs.rs/use-grid-search"
 keywords = ["grid", "search", "optimization", "objective", "score"]
 categories = ["algorithms", "mathematics", "science"]
