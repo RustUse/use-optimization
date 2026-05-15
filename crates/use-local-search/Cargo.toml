@@ -1,0 +1,20 @@
+[package]
+name = "use-local-search"
+description = "Minimal one-dimensional hill-climbing style local search helpers"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+documentation = "https://docs.rs/use-local-search"
+keywords = ["local", "search", "optimization", "hill-climbing", "objective"]
+categories = ["algorithms", "mathematics", "science"]
+
+[dependencies]
+use-objective.workspace = true
+
+[lints]
+workspace = true
