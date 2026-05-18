@@ -23,7 +23,7 @@ jobs:
                 use-grid-search use-local-search
         steps:
             - name: Check out repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
 
             - name: Install stable Rust toolchain
               uses: actions-rust-lang/setup-rust-toolchain@v1
