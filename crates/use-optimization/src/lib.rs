@@ -36,8 +36,8 @@ pub use use_search_space::*;
 #[cfg(test)]
 mod tests {
     use super::{
-        absolute_error, best_value, grid_search_1d, local_search_1d, normalize_min_max, Bounds,
-        LocalSearchConfig, ObjectiveDirection, RangeSpace,
+        Bounds, LocalSearchConfig, ObjectiveDirection, RangeSpace, absolute_error, best_value,
+        grid_search_1d, local_search_1d, normalize_min_max,
     };
 
     #[test]
@@ -46,11 +46,13 @@ mod tests {
             best_value(&[2.0, 6.0, 4.0], ObjectiveDirection::Maximize),
             Some(6.0)
         );
-        assert!(Bounds {
-            min: Some(0.0),
-            max: Some(5.0)
-        }
-        .contains(3.0));
+        assert!(
+            Bounds {
+                min: Some(0.0),
+                max: Some(5.0)
+            }
+            .contains(3.0)
+        );
         assert_eq!(absolute_error(3.0, 1.5), 1.5);
         assert_eq!(
             normalize_min_max(&[2.0, 4.0, 6.0]),

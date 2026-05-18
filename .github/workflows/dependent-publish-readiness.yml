@@ -1,6 +1,6 @@
 name: Dependent Publish Readiness
 
-on:
+"on":
     workflow_dispatch:
         inputs:
             wave-one-ready:

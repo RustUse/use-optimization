@@ -1,6 +1,6 @@
 name: Release Publish Automation
 
-on:
+"on":
     push:
         branches:
             - main
@@ -27,8 +27,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             PUBLISHED_CRATES: >-
-                use-objective use-optimization-constraint use-search-space use-score
-                use-loss use-grid-search use-local-search use-optimization
+              use-objective use-optimization-constraint use-search-space use-score use-loss use-grid-search use-local-search use-optimization
         steps:
             - name: Check out repository
               uses: actions/checkout@v4

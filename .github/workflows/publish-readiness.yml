@@ -1,45 +1,44 @@
 name: Publish Readiness
 
-on:
-    pull_request:
-        branches:
-            - main
-    push:
-        branches:
-            - main
-    workflow_dispatch:
+"on":
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-    contents: read
+  contents: read
 
 jobs:
-    release-readiness:
-        name: Release Readiness Checks
-        runs-on: ubuntu-latest
-        env:
-            WAVE_ONE_CRATES: >-
-                use-objective use-optimization-constraint use-search-space
-                use-score use-loss
-        steps:
-            - name: Check out repository
-              uses: actions/checkout@v4
+  release-readiness:
+    name: Release Readiness Checks
+    runs-on: ubuntu-latest
+    env:
+      FOCUSED_CRATES: >-
+        use-objective use-optimization-constraint use-search-space use-score use-loss use-grid-search use-local-search
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-            - name: Install stable Rust toolchain
-              uses: actions-rust-lang/setup-rust-toolchain@v1
-              with:
-                  rustflags: ""
-                  cache-workspaces: |
-                      . -> target
+      - name: Install stable Rust toolchain
+        uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          rustflags: ""
+          cache-workspaces: |
+            . -> target
 
-            - name: Check examples with all features enabled
-              run: cargo check --workspace --all-features --examples
+      - name: Check examples with all features enabled
+        run: cargo check --workspace --all-features --examples
 
-            - name: Test workspace without default features
-              run: cargo test --workspace --no-default-features
+      - name: Test workspace without default features
+        run: cargo test --workspace --no-default-features
 
-            - name: Dry-run publish Wave 1 crates
-              run: |
-                  for crate in $WAVE_ONE_CRATES; do
-                    cargo package --list -p "$crate"
-                    cargo publish --dry-run --allow-dirty -p "$crate"
-                  done
+      - name: Dry-run publish focused crates
+        run: |
+          for crate in $FOCUSED_CRATES; do
+            cargo package --list -p "$crate"
+            cargo publish --dry-run --allow-dirty -p "$crate"
+          done
