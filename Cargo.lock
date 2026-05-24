@@ -4,29 +4,29 @@ version = 4
 
 [[package]]
 name = "use-grid-search"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "use-objective",
 ]
 
 [[package]]
 name = "use-local-search"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "use-objective",
 ]
 
 [[package]]
 name = "use-loss"
-version = "0.0.1"
+version = "0.0.2"
 
 [[package]]
 name = "use-objective"
-version = "0.0.1"
+version = "0.0.2"
 
 [[package]]
 name = "use-optimization"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "use-grid-search",
  "use-local-search",
@@ -39,12 +39,12 @@ dependencies = [
 
 [[package]]
 name = "use-optimization-constraint"
-version = "0.0.1"
+version = "0.0.2"
 
 [[package]]
 name = "use-score"
-version = "0.0.1"
+version = "0.0.2"
 
 [[package]]
 name = "use-search-space"
-version = "0.0.1"
+version = "0.0.2"
